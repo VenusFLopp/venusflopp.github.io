@@ -133,6 +133,7 @@
             padding: 20px;
             margin-top: 20px;
             border-left: 4px solid #40a7e3;
+            text-align: center;
         }
         
         .greeting {
@@ -153,6 +154,25 @@
             font-size: 14px;
         }
         
+        /* Стили для кнопки */
+        .open-file-btn {
+            background: linear-gradient(90deg, #40a7e3, #8241e3);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        
+        .open-file-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(64, 167, 227, 0.3);
+        }
+        
         @media (max-width: 600px) {
             .channel-grid {
                 grid-template-columns: 1fr;
@@ -164,6 +184,11 @@
             
             .header-title {
                 font-size: 18px;
+            }
+            
+            .open-file-btn {
+                padding: 12px 24px;
+                font-size: 16px;
             }
         }
     </style>
@@ -179,21 +204,25 @@
         
         <div class="content">
             <div class="section">
-                <div class="section-title">
-
+                <div class="text-content">
+                    <div class="greeting">Пельмени эдит</div>
+                    <div class="message">
+                        <button class="open-file-btn" onclick="openFile()">Открыть файл</button>
+                    </div>
                 </div>
-<div class="text-content">
-    <div class="greeting">Пельмени эдит</div>
-    <div class="message">
-        <div style="width: 100%; max-width: 640px; margin: 0 auto;">
-            <video src="Video.mp4" controls style="width: 100%; height: auto; border-radius: 8px;"></video>
+            </div>
         </div>
-    </div>
-</div>
         
         <div class="footer">
             <p>Окак -от шлёпы</p>
         </div>
     </div>
+
+    <script>
+        function openFile() {
+            // Замените 'filename.ext' на имя вашего файла
+            window.open('Video.mp4', '_blank');
+        }
+    </script>
 </body>
 </html>
