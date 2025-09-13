@@ -29,7 +29,7 @@
         }
         
         .telegram-header {
-            background: linear-gradient(90deg, #40a7e3, #8241e3);
+            background: #4a95d6;
             padding: 20px;
             display: flex;
             align-items: center;
@@ -47,7 +47,7 @@
         }
         
         .telegram-logo-icon {
-            color: #40a7e3;
+            color: #4a95d6;
             font-weight: bold;
             font-size: 24px;
         }
@@ -69,7 +69,7 @@
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #40a7e3;
+            color: #4a95d6;
             display: flex;
             align-items: center;
         }
@@ -102,7 +102,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #40a7e3, #8241e3);
+            background: #4a95d6;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -124,7 +124,7 @@
         
         .channel-members {
             font-size: 13px;
-            color: #40a7e3;
+            color: #4a95d6;
         }
         
         .text-content {
@@ -132,14 +132,13 @@
             border-radius: 10px;
             padding: 20px;
             margin-top: 20px;
-            border-left: 4px solid #40a7e3;
-            text-align: center;
+            border-left: 4px solid #4a95d6;
         }
         
         .greeting {
             font-size: 24px;
             margin-bottom: 15px;
-            color: #40a7e3;
+            color: #4a95d6;
         }
         
         .message {
@@ -156,7 +155,7 @@
         
         /* Стили для кнопки */
         .open-file-btn {
-            background: linear-gradient(90deg, #40a7e3, #8241e3);
+            background: #4a95d6;
             color: white;
             border: none;
             padding: 15px 30px;
@@ -166,11 +165,12 @@
             transition: transform 0.2s, box-shadow 0.2s;
             margin: 20px 0;
             font-weight: 600;
+            display: inline-block;
         }
         
         .open-file-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(64, 167, 227, 0.3);
+            box-shadow: 0 5px 15px rgba(74, 149, 214, 0.3);
         }
         
         @media (max-width: 600px) {
@@ -189,6 +189,8 @@
             .open-file-btn {
                 padding: 12px 24px;
                 font-size: 16px;
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -221,7 +223,7 @@
     <script>
         function openFile() {
             // Замените 'filename.ext' на имя вашего файла
-            window.open('Video.mp4', '_blank');
+            window.open('filename.ext', '_blank');
         }
     </script>
 </body>
