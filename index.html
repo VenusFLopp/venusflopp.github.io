@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Венерочка</title>
+    <title>Венерочки</title>
     <style>
         * {
             margin: 0;
@@ -115,8 +115,8 @@
         }
         
         .likee-avatar {
-            background: #ff0050; /* Розовый цвет как у Likee */
-            color: #000; /* Черный текст */
+            background: #ff0050;
+            color: #000;
         }
         
         .channel-name {
@@ -163,10 +163,9 @@
         
         .quote {
             margin-top: 10px;
-            color: #888; /* Такой же цвет, как у текста "Окак - от шлёпы" */
+            color: #888;
         }
         
-        /* Стили для кнопки */
         .open-file-btn {
             background: #4a95d6;
             color: white;
@@ -228,7 +227,7 @@
             </div>
             
             <div class="section">
-                <h2 class="section-title">Наши каналы</h2>
+                <h2 class="section-title">Наши каналы и боты</h2>
                 <div class="channel-grid">
                     <a href="https://web.telegram.org/a/#-1002841118580" class="channel-card" target="_blank">
                         <div class="channel-avatar">В</div>
@@ -250,6 +249,20 @@
                         <p class="channel-desc">Официальный Likee канал</p>
                         <div class="channel-members">Подписаться →</div>
                     </a>
+
+                    <a href="https://t.me/AiFloppaBot" class="channel-card" target="_blank">
+                        <div class="channel-avatar">Ш</div>
+                        <h3 class="channel-name">Шлёбот</h3>
+                        <p class="channel-desc">Ботяра шлёпы</p>
+                        <div class="channel-members">Написать боту →</div>
+                    </a>
+
+                    <a href="https://t.me/Veneralikeebot" class="channel-card" target="_blank">
+                        <div class="channel-avatar">В</div>
+                        <h3 class="channel-name">Венерский бот</h3>
+                        <p class="channel-desc">Официальный бот Венеры</p>
+                        <div class="channel-members">Написать боту →</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -261,11 +274,9 @@
 
     <script>
         function openFile() {
-            // Замените 'filename.ext' на имя вашего файла
             window.open('Video.mp4', '_blank');
         }
         
-        // Массив цитат Шлёпы
         const quotes = [
             "Жил был не жил - шлёпы",
             "Весёлый факт: пельмени вкусные - шлёпа",
@@ -275,13 +286,11 @@
             "эти цитаты рандомные - шлёпа"
         ];
         
-        // Функция для выбора случайной цитаты
         function getRandomQuote() {
             const randomIndex = Math.floor(Math.random() * quotes.length);
             return quotes[randomIndex];
         }
         
-        // Установка случайной цитаты при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
             const quoteElement = document.getElementById('random-quote');
             quoteElement.textContent = getRandomQuote();
