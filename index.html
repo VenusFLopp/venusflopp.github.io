@@ -91,6 +91,9 @@
             padding: 15px;
             transition: transform 0.2s, background-color 0.2s;
             cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
         }
         
         .channel-card:hover {
@@ -109,6 +112,11 @@
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 20px;
+        }
+        
+        .likee-avatar {
+            background: #ff0050; /* Розовый цвет как у Likee */
+            color: #000; /* Черный текст */
         }
         
         .channel-name {
@@ -151,6 +159,11 @@
             background-color: #1e1e1e;
             color: #888;
             font-size: 14px;
+        }
+        
+        .quote {
+            margin-top: 10px;
+            color: #888; /* Такой же цвет, как у текста "Окак - от шлёпы" */
         }
         
         /* Стили для кнопки */
@@ -213,10 +226,36 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="section">
+                <h2 class="section-title">Наши каналы</h2>
+                <div class="channel-grid">
+                    <a href="https://web.telegram.org/a/#-1002841118580" class="channel-card" target="_blank">
+                        <div class="channel-avatar">В</div>
+                        <h3 class="channel-name">Канал Венерочки</h3>
+                        <p class="channel-desc">Официальный канал Венерочки</p>
+                        <div class="channel-members">Подписаться →</div>
+                    </a>
+                    
+                    <a href="https://web.telegram.org/a/#-1003061845640" class="channel-card" target="_blank">
+                        <div class="channel-avatar">У</div>
+                        <h3 class="channel-name">Канал Уранчика</h3>
+                        <p class="channel-desc">Официальный канал Уранчика</p>
+                        <div class="channel-members">Подписаться →</div>
+                    </a>
+
+                    <a href="https://l.likee.video/p/g6zeJX" class="channel-card" target="_blank">
+                        <div class="channel-avatar likee-avatar">L</div>
+                        <h3 class="channel-name">Likee Венерочки</h3>
+                        <p class="channel-desc">Официальный Likee канал</p>
+                        <div class="channel-members">Подписаться →</div>
+                    </a>
+                </div>
+            </div>
         </div>
         
         <div class="footer">
-            <p>Окак -от шлёпы</p>
+            <p class="quote" id="random-quote"></p>
         </div>
     </div>
 
@@ -225,6 +264,28 @@
             // Замените 'filename.ext' на имя вашего файла
             window.open('Video.mp4', '_blank');
         }
+        
+        // Массив цитат Шлёпы
+        const quotes = [
+            "Жил был не жил - шлёпы",
+            "Весёлый факт: пельмени вкусные - шлёпа",
+            "Роблокс моя жизнь - шлёпа",
+            "Факт: я делал этот сайт - шлёпа",
+            "кстати плутон и харон двойная планета - шлёпа",
+            "эти цитаты рандомные - шлёпа"
+        ];
+        
+        // Функция для выбора случайной цитаты
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            return quotes[randomIndex];
+        }
+        
+        // Установка случайной цитаты при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const quoteElement = document.getElementById('random-quote');
+            quoteElement.textContent = getRandomQuote();
+        });
     </script>
 </body>
 </html>
